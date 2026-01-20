@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/auth.js" defer></script>
+</head>
+<body>
+
+<a href="index.html" class="back-home">← На главную</a>
+
+<div class="split">
+    <div class="image-side"></div>
+    <div class="form-side">
+        <div class="form">
+            <h2>Регистрация</h2>
+            <input id="username" placeholder="Имя">
+            <input id="email" type="email" placeholder="Email">
+            <input id="password" type="password" placeholder="Пароль">
+            <button onclick="saveUser(username.value, email.value, password.value); alert('Регистрация успешна!')">
+                Зарегистрироваться
+            </button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

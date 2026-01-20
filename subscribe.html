@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Подписка</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a href="index.html" class="back-home">← На главную</a>
+
+<div class="banner">
+    Премиум-подписка
+</div>
+
+<div class="container">
+    <div class="cards">
+        <div class="card">
+            <img src="images/premium.jpg">
+            <h2>Эксклюзивные материалы</h2>
+            <p>Полный доступ к уникальным стилям интерьера</p>
+            <button onclick="buy()">Купить подписку</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function buy() {
+    localStorage.setItem("subscribed", "true");
+    alert("Подписка активирована!");
+}
+</script>
+
+</body>
+</html>
