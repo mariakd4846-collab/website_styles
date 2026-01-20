@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="card profile">
+    <div class="avatar">
+        <img src="images/avatar.png">
+        <p>Аватар</p>
+    </div>
+
+    <div>
+        <h2>Профиль пользователя</h2>
+        <input id="username" placeholder="Имя">
+        <input id="email" placeholder="Email">
+        <button onclick="saveProfile()">Сохранить</button>
+    </div>
+</div>
+
+<script>
+const user = JSON.parse(localStorage.getItem("user"));
+document.getElementById("username").value = user.username;
+document.getElementById("email").value = user.email;
+
+function saveProfile() {
+    user.username = document.getElementById("username").value;
+    user.email = document.getElementById("email").value;
+    localStorage.setItem("user", JSON.stringify(user));
+    alert("Данные сохранены");
+}
+</script>
+
+</body>
+</html>
